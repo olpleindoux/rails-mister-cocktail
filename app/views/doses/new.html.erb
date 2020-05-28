@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <div class="col-xs-12 col-md-4">
+    <div class="py-5">
+      <h1>Tag <%= @cocktail.name %></h1>
+      <div class="mb-5">
+        <%= simple_form_for([@cocktail, @dose]) do |f| %>
+          <%= f.association :ingredient %>
+          <%= f.input :description, placeholder: '3cl, 1cas, 10g...' %>
+          <%= f.button :submit, class: "btn btn-primary btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
