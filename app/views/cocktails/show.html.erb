@@ -1,4 +1,6 @@
-<h2><%= @cocktail.name %></h2>
+<div class="" style="background-image: url(<%= @cocktail.image_url %>);">
+  <h2><%= @cocktail.name %></h2>
+</div>
 
 <div class="container">
   <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail) %>
