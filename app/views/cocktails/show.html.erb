@@ -1,6 +1,9 @@
-<div class="" style="background-image: url(<%= @cocktail.image_url %>);">
-  <h2><%= @cocktail.name %></h2>
-</div>
+<% if @cocktail.photo.present? %>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+  <img src="https://res.cloudinary.com/dxm0jgohk/image/upload/v1590858089/no-image-found_cgtzyt.png" alt="">
+<% end %>
+<h2><%= @cocktail.name %></h2>
 
 <div class="container">
   <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail) %>

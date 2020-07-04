@@ -36,6 +36,7 @@ gem 'cloudinary', '~> 1.12.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem "websocket-extensions", ">= 0.1.5"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
